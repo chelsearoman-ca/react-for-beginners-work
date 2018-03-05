@@ -8,9 +8,10 @@ class StorePicker extends React.Component{
 
     //hey what up new ref stuff goes here -- it used to be ref = {(input) =>{this.storeInput = input}}
     //now it's this:
-    Input = React.createRef();
+    myInput = React.createRef();
 
-    goToStore(e){
+    goToStore = e =>{ //so here we've declaired a property called goToStore w/ an arrow function instead of the goToStore(e) method we had before
+    // so we don't need to call constructor and do the binding theres
         e.preventDefault();
         console.log('you changed the URL');
         //first grab the text from the input
@@ -27,7 +28,7 @@ class StorePicker extends React.Component{
                 <h2>Please enter a store</h2>
                 <input type="text"
                   required placeholder="Store Name"
-                  defaultValue={getFunName()} ref={(input) => {t}}/>
+                  defaultValue={getFunName()} ref={this.myInput.bind(this)}/>
                 <button type="submit">Visit Store →</button>
             </form>
         )
