@@ -8,4 +8,4 @@ class Order extends React.Component{
     }
 }
 
-export default Order;
+export default Order

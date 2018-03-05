@@ -13,7 +13,7 @@ class StorePicker extends React.Component{
     goToStore = e =>{ //so here we've declaired a property called goToStore w/ an arrow function instead of the goToStore(e) method we had before
     // so we don't need to call constructor and do the binding theres
         e.preventDefault();
-        console.log('you changed the URL');
+        console.log(this);
         //first grab the text from the input
         //second we're going ot transition from ./ to .storeId
         const storeId=this.storeInput.value;
@@ -38,4 +38,4 @@ class StorePicker extends React.Component{
 StorePicker.contextTypes={
     router: React.PropTypes.object
 }
-export default StorePicker;
+export default StorePicker
