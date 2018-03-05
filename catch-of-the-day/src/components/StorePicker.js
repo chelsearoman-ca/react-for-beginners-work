@@ -5,11 +5,15 @@ class StorePicker extends React.Component{
     // constructor(){
     //     super();
     //     this.goToStore = this.goToStore.bind(this);
-    // }
+
+    //hey what up new ref stuff goes here -- it used to be ref = {(input) =>{this.storeInput = input}}
+    //now it's this:
+    Input = React.createRef();
+
     goToStore(e){
         e.preventDefault();
         console.log('you changed the URL');
-        //first grab the text from the box
+        //first grab the text from the input
         //second we're going ot transition from ./ to .storeId
         const storeId=this.storeInput.value;
         console.log(`Going to ${storeId}`);
@@ -21,7 +25,9 @@ class StorePicker extends React.Component{
         return(
             <form className="store-selector" onSubmit={this.goToStore.bind(this)}>
                 <h2>Please enter a store</h2>
-                <input type="text" required placeholder="Store Name" defaultValue={getFunName()} ref={(input) => {this.storeInput=input}}/>
+                <input type="text"
+                  required placeholder="Store Name"
+                  defaultValue={getFunName()} ref={(input) => {t}}/>
                 <button type="submit">Visit Store →</button>
             </form>
         )
