@@ -1,5 +1,5 @@
-import React from 'react'
-import AddFishForm from './AddFishForm'
+import React from 'react';
+import AddFishForm from './AddFishForm';
 
 class Inventory extends React.Component{
     render(){
@@ -12,4 +12,4 @@ class Inventory extends React.Component{
     }
 }
 
-export default Inventory
+export default Inventory;

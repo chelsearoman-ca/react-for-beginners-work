@@ -1,7 +1,7 @@
-import React from 'react'
-import Header from './Header'
-import Order from './Order'
-import Inventory from './Inventory'
+import React from 'react';
+import Header from './Header';
+import Order from './Order';
+import Inventory from './Inventory';
 
 class App extends React.Component{
     render(){
@@ -17,4 +17,4 @@ class App extends React.Component{
     }
 }
 
-export default App 
+export default App;

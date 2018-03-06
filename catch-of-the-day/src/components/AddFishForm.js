@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 class AddFishForm extends React.Component{
     render(){
@@ -21,4 +21,4 @@ class AddFishForm extends React.Component{
 
 }
 
-export default AddFishForm
+export default AddFishForm;
