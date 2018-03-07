@@ -1,15 +1,14 @@
 import React from 'react';
 
 class AddFishForm extends React.Component{
+
   nameRef = React.createRef();
   priceRef = React.createRef();
   statusRef = React.createRef();
   descRef = React.createRef();
   imageRef = React.createRef();
 
-
-
-  createFish = (e) =>{
+  createFish = e =>{
     //1. no submit on reload
     e.preventDefault();
     //2. pull values out of the inputs
